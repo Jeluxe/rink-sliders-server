@@ -1,4 +1,4 @@
-const io = require('./app');
+const io = require('./heroku');
 const { validRoom, isUserInRoom } = require('./services/functions');
 
 let rooms = [];

@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 server.listen(PORT, () => {
-    console.log(`server is on port: ${PORT} \n Link: http://localhost:${PORT}`);
+    // console.log(`server is on port: ${PORT} \n Link: http://localhost:${PORT}`);
 });
 
 module.exports = io;
