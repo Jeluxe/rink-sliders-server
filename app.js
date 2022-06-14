@@ -4,7 +4,8 @@ const cors = require('cors');
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-export const io = new Server(server);
+const io = new Server(server);
+module.exports = io;
 require('./socket');
 
 
