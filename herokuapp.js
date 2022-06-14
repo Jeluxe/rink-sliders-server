@@ -4,7 +4,8 @@ const path = require('path');
 const http = require('http');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
-const io = new Server(server);
+export const io = new Server(server);
+require('./socket');
 
 const PORT = process.env.PORT || 4000;
 
@@ -20,6 +21,3 @@ app.get('/*', function (req, res) {
 server.listen(PORT, () => {
     console.log(`server is on port: ${PORT} \n Link: http://localhost:${PORT}`);
 });
-
-module.exports = io;
-require('./socket');
