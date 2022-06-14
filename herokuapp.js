@@ -20,9 +20,9 @@ app.get('/*', function (req, res) {
 let rooms = [];
 
 io.on('connection', (socket) => {
-    socket.on('join room', (username, cb) => {
+    socket.on('join room', (username) => {
         if (isUserInRoom(socket)) {
-            cb('error', 'join room err:' + ' cannot join another room');
+            // cb('error', 'join room err:' + ' cannot join another room');
         } else {
             const newRoom = validRoom();
             socket.username = username;
